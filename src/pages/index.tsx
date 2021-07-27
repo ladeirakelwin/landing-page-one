@@ -1,9 +1,10 @@
 import Head from "next/head";
-import BrandItem from "../components/BrandItem.tsx";
-import Button from "../components/Button.tsx";
-import ResultsCard from "../components/ResultsCard.tsx";
-import Card from "../components/Card.tsx";
-import YellowFont from "../components/YellowFont.tsx";
+import BrandItem from "../components/BrandItem";
+import Button from "../components/Button";
+import ResultsCard from "../components/ResultsCard";
+import Card from "../components/Card";
+import YellowFont from "../components/YellowFont";
+import FooterMenu from "../components/FooterMenu";
 
 export default function Home() {
   const brandImgs = [
@@ -81,16 +82,16 @@ export default function Home() {
     ],
   ];
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gradient-to-r from-blue-800 to-indigo-900">
+    <div className="flex flex-col items-center justify-center min-h-screen py-14 bg-gradient-to-r from-indigo-900 to-indigo-800 px-36 font-normal">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex">
-        <div>
-          <img src="/logo.webp" className="h-8 w-8" alt="" />
-          <ul>
+      <header className="flex flex-1  justify-between w-full pb-16">
+        <div className="flex gap-10 items-center">
+          <img src="/logo.webp" className="h-9 w-9" alt="" />
+          <ul className="flex gap-3 items-center text-white">
             <li>About</li>
             <li>Gallery</li>
             <li>Pricing</li>
@@ -98,11 +99,11 @@ export default function Home() {
             <li>Benefits</li>
           </ul>
         </div>
-        <div>
-          <Button type="secondary" className="text-yellow-500 text-sm w-24 h-8">
+        <div className="flex gap-5 ">
+          <Button type="secondary" className="text-yellow-500 text-sm w-24 h-9 font-medium">
             Sign In
           </Button>
-          <Button type="primary" className="text-white text-sm w-24 h-8">
+          <Button type="primary" className="text-white text-sm w-24 h-9 font-medium">
             Sign Up
           </Button>
         </div>
@@ -303,13 +304,7 @@ export default function Home() {
         <div>
           {["First", "Second", "Third", "Fourth"].map((item, index) => {
             return (
-              <ul>
-                <li>{item}</li>
-                <li>First Page</li>
-                <li>Second Page</li>
-                <li>Third Page</li>
-                <li>Fourth Page</li>
-              </ul>
+              <FooterMenu title={item} key={index}></FooterMenu>
             );
           })}
         </div>
