@@ -215,15 +215,15 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="flex flex-col">
-          <p>
+        <section id="call2action" className="flex flex-col gap-12 justify-center items-center mx-36 mb-80 z-10 relative">
+          <h2 className="text-5xl font-bold text-green-200 text-center w-3/4 z-10 relative">
             Create your <YellowFont>next project</YellowFont> with startup
             framework
-          </p>
-          <Button type="primary" className="text-sm w-36 h-12">
+          </h2>
+          <Button type="primary" className="text-sm w-36 h-12 z-10 relative font-semibold">
             Get Started
           </Button>
-          <img src="/image-background-two.webp" alt="background icon two" />
+          <img src="/image-background-two.webp" alt="background icon two" className="z-0 absolute top-16"/>
         </section>
         <section>
           <div>
