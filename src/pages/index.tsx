@@ -177,12 +177,12 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section>
-          <div>
-            <h2>
+        <section id="suggest" className="px-36 items-center justify-center flex pb-36">
+          <div className="flex flex-col gap-8 w-1/2">
+            <h2 className="text-green-200 text-5xl font-semibold">
               Increase your business <YellowFont>traffic</YellowFont>
             </h2>
-            <p>
+            <p className="text-sm text-indigo-400 w-5/6 leading-9">
               We are committed to processing the information in order to contact
               you and talk about your project.
             </p>
@@ -190,7 +190,7 @@ export default function Home() {
               Learn More
             </Button>
           </div>
-          <div>
+          <div className="w-1/2">
             <img src="/call-to-action.webp" alt="call to action image" />
           </div>
         </section>
