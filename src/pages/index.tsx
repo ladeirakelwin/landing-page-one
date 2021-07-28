@@ -194,18 +194,18 @@ export default function Home() {
             <img src="/call-to-action.webp" alt="call to action image" />
           </div>
         </section>
-        <section className="flex flex-col">
-          <div>
-            <h2>
+        <section id="metrics" className="flex flex-col px-36 pb-36">
+          <div className="text-center flex flex-col justify-center items-center pb-16">
+            <h2 className="w-2/3 text-4xl text-green-200 pb-8 font-bold">
               3 Simple Ways To <YellowFont>Save</YellowFont> A Bunch Of{" "}
               <YellowFont>Money</YellowFont> When Buying A New Computer
             </h2>
-            <p>
+            <p className="w-1/2 text-indigo-400">
               Fully customizable and neatly organized components will help you
               work faster without limiting creative freedom.
             </p>
           </div>
-          <div>
+          <div className="grid grid-cols-3">
             {resultsInfo.map(([numbers, data], index) => (
               <ResultsCard
                 numbers={numbers}
