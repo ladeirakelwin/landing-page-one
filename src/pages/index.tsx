@@ -82,13 +82,13 @@ export default function Home() {
     ],
   ];
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-14 bg-gradient-to-r from-indigo-900 to-indigo-800 px-36 font-normal">
+    <div className="flex flex-col items-center justify-center min-h-screen py-14 bg-gradient-to-r from-indigo-900 to-indigo-800  font-normal">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex flex-1  justify-between w-full pb-16">
+      <header className="flex flex-1  justify-between w-full pb-16 px-36">
         <div className="flex gap-10 items-center">
           <img src="/logo.webp" className="h-9 w-9" alt="" />
           <ul className="flex gap-3 items-center text-white">
@@ -100,44 +100,54 @@ export default function Home() {
           </ul>
         </div>
         <div className="flex gap-5 ">
-          <Button type="secondary" className="text-yellow-500 text-sm w-24 h-9 font-medium">
+          <Button
+            type="secondary"
+            className="text-yellow-500 text-sm w-24 h-9 font-medium"
+          >
             Sign In
           </Button>
-          <Button type="primary" className="text-white text-sm w-24 h-9 font-medium">
+          <Button
+            type="primary"
+            className="text-white text-sm w-24 h-9 font-medium"
+          >
             Sign Up
           </Button>
         </div>
       </header>
 
       <main className="flex flex-col">
-        <section id="hero">
-          <div>
-            <h1>
-              Many reasons to get up and start to get back in the business{" "}
-            </h1>
-            <p>
-              The harder you work for something, the greater you’ll feel when
-              you achieve it.
-            </p>
+        <section id="hero" className="flex w-full pl-36 gap-10">
+          <div className="w-1/2">
+            <div>
+              <h1 className="text-5xl text-green-200 font-semibold">
+                Many reasons to get up and start to get back in the business
+              </h1>
+              <p className="text-indigo-400 py-4">
+                The harder you work for something, the greater you’ll feel when
+                you achieve it.
+              </p>
+            </div>
+            <div className="flex gap-6 mb-4">
+              <Button type="primary" className="text-sm w-32 h-10">
+                Learn More
+              </Button>
+              <Button type="secondary" className="text-sm w-32 h-10">
+                Demo
+              </Button>
+            </div>
+            <div className="flex gap-6 text-sm mt-8">
+              <img src="/video.webp" alt="" />
+              <div className="flex flex-col text-indigo-400 gap-3">
+                <p>
+                  The harder you work for something, the greater you’ll feel
+                  when you achieve it.
+                </p>
+                <p>Watch preview</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <Button type="primary" className="text-sm w-32 h-10">
-              Learn More
-            </Button>
-            <Button type="secondary" className="text-sm w-32 h-10">
-              More
-            </Button>
-          </div>
-          <div>
-            <img src="/video.webp" alt="" />
-            <p>
-              The harder you work for something, the greater you’ll feel when
-              you achieve it.
-            </p>
-            <p>Watch preview</p>
-          </div>
-          <div>
-            <img src="/human.webp" alt="" />
+          <div className="relative w-1/2">
+            <img src="/run-image.webp" alt="" className="run-image" />
           </div>
         </section>
         <section>
@@ -303,9 +313,7 @@ export default function Home() {
 
         <div>
           {["First", "Second", "Third", "Fourth"].map((item, index) => {
-            return (
-              <FooterMenu title={item} key={index}></FooterMenu>
-            );
+            return <FooterMenu title={item} key={index}></FooterMenu>;
           })}
         </div>
         <div>
