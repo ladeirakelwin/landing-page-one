@@ -157,9 +157,14 @@ export default function Home() {
             ))}
           </ul>
         </section>
-        <section className="flex flex-col justify-center items-center gap-8 px-36 pb-36" id="your-choice">
+        <section
+          className="flex flex-col justify-center items-center gap-8 px-36 pb-36"
+          id="your-choice"
+        >
           <div className="flex flex-col text-center gap-4">
-            <h2 className="text-green-200 text-5xl font-semibold">Your choice</h2>
+            <h2 className="text-green-200 text-5xl font-semibold">
+              Your choice
+            </h2>
             <p className="text-indigo-400">
               There are many reasons to get down and start to get depressed
               about your situation.
@@ -173,11 +178,15 @@ export default function Home() {
                 title={title}
                 subtitle={subtitle}
                 key={index}
+                type={1}
               ></Card>
             ))}
           </div>
         </section>
-        <section id="suggest" className="px-36 items-center justify-center flex pb-36">
+        <section
+          id="suggest"
+          className="px-36 items-center justify-center flex pb-36"
+        >
           <div className="flex flex-col gap-8 w-1/2">
             <h2 className="text-green-200 text-5xl font-semibold">
               Increase your business <YellowFont>traffic</YellowFont>
@@ -215,15 +224,25 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section id="call2action" className="flex flex-col gap-12 justify-center items-center mx-36 mb-80 z-10 relative">
+        <section
+          id="call2action"
+          className="flex flex-col gap-12 justify-center items-center mx-36 mb-80 z-10 relative"
+        >
           <h2 className="text-5xl font-bold text-green-200 text-center w-3/4 z-10 relative">
             Create your <YellowFont>next project</YellowFont> with startup
             framework
           </h2>
-          <Button type="primary" className="text-sm w-36 h-12 z-10 relative font-semibold">
+          <Button
+            type="primary"
+            className="text-sm w-36 h-12 z-10 relative font-semibold"
+          >
             Get Started
           </Button>
-          <img src="/image-background-two.webp" alt="background icon two" className="z-0 absolute top-16"/>
+          <img
+            src="/image-background-two.webp"
+            alt="background icon two"
+            className="z-0 absolute top-16"
+          />
         </section>
         <section id="omah-mukti" className="flex w-full px-36 mt-20 mb-28">
           <div className="flex flex-col gap-8 w-2/5 ">
@@ -240,22 +259,32 @@ export default function Home() {
             </Button>
           </div>
           <div className="relative z-10 w-3/5 flex justify-end">
-            <img src="/omah-mukti.webp" alt="example image" className="relative z-10 h-5/6" />
-            <img src="/world-map.webp" alt="world map image"  className="z-0 absolute bottom-9 right-0 left-36 w-full h-full"/>
+            <img
+              src="/omah-mukti.webp"
+              alt="example image"
+              className="relative z-10 h-5/6"
+            />
+            <img
+              src="/world-map.webp"
+              alt="world map image"
+              className="z-0 absolute bottom-9 right-0 left-36 w-full h-full"
+            />
           </div>
         </section>
-        <section>
-          <div>
+        <section id="help" className="flex px-36 gap-8 mb-36">
+          <div className="w-1/2">
             <img src="/example-image-three.webp" alt="example image" />
           </div>
-          <div>
-            <h2>Help Finding Information Online</h2>
-            <p>
+          <div className="w-1/2 flex justify-center flex-col gap-10 text-left">
+            <h2 className="text-green-200 text-2xl font-semibold">
+              Help Finding Information Online
+            </h2>
+            <p className="text-sm text-indigo-400 w-4/5">
               Fully customizable and neatly organized components will help you
               work faster without limiting creative freedom.
             </p>
-            <div>
-              <div>
+            <div className="z-10 relative">
+              <div className="grid grid-cols-2 relative z-10">
                 {helpInfo.map(([src, alt, title, subtitle], index) => (
                   <Card
                     src={src}
@@ -263,11 +292,16 @@ export default function Home() {
                     title={title}
                     subtitle={subtitle}
                     key={index}
+                    type={0}
                   ></Card>
                 ))}
               </div>
-              <img src="/image-background-final.webp" alt="image background" />
             </div>
+            <img
+              src="/image-background-final.webp"
+              alt="image background"
+              className="z-0 absolute right-1"
+            />
           </div>
         </section>
 
