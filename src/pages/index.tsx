@@ -157,15 +157,15 @@ export default function Home() {
             ))}
           </ul>
         </section>
-        <section>
-          <div>
-            <h2>Your choice</h2>
-            <h3>
+        <section className="flex flex-col justify-center items-center gap-8 px-36 pb-36" id="your-choice">
+          <div className="flex flex-col text-center gap-4">
+            <h2 className="text-green-200 text-5xl font-semibold">Your choice</h2>
+            <p className="text-indigo-400">
               There are many reasons to get down and start to get depressed
               about your situation.
-            </h3>
+            </p>
           </div>
-          <div>
+          <div className="grid grid-cols-3 gap-4">
             {yccInfos.map(([src, alt, title, subtitle], index) => (
               <Card
                 src={src}
