@@ -150,8 +150,8 @@ export default function Home() {
             <img src="/run-image.webp" alt="" className="run-image" />
           </div>
         </section>
-        <section>
-          <ul>
+        <section id="brands" className="flex w-full px-36 pb-20">
+          <ul className="flex flex-1 justify-evenly items-center">
             {brandImgs.map(([src, alt], index) => (
               <BrandItem key={index} src={src} alt={alt}></BrandItem>
             ))}
