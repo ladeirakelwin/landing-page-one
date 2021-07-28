@@ -305,25 +305,25 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <div>
+        <section id="form-section" className="px-36 flex flex-col flex-1 mb-36">
+          <div className="rounded-md bg-indigo-700 text-center py-16 gap-8 w-full items-center">
             <div>
-              <h2>There are many reasons to get down</h2>
-              <p>
+              <h2 className="text-yellow-500 text-4xl font-bold mb-4">There are many reasons to get down</h2>
+              <p className="text-indigo-200 text-sm w-1/2 mx-auto mb-4">
                 There are many reasons to get down and start to get depressed
-                about your situation.{" "}
+                about your situation.
               </p>
             </div>
             <div>
-              <form>
-                <input type="email" placeholder="Your Email" />
-                <Button type="primary" className="text-sm w-24 h-8">
+              <form className="flex justify-center pb-4">
+                <input type="email" placeholder="Your Email" className="flex w-1/3 p-4 rounded-l-sm border-0 bg-gray-600"/>
+                <Button type="primary" className="text-sm w-32 flex border-0 items-center justify-center font-bold">
                   SEND
                 </Button>
               </form>
             </div>
             <div>
-              <p>No spam. Only releases, updates and discounts</p>
+              <p className="mx-auto text-sm text-indigo-200">No spam. Only releases, updates and discounts</p>
             </div>
           </div>
         </section>
