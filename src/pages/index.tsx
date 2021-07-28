@@ -329,10 +329,10 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex">
-        <div>
-          <p>ARShakir</p>
-          <ul>
+      <footer className="flex flex-col w-full px-36">
+        <div className="flex justify-between w-full pb-24">
+          <p className="text-yellow-500 font-bold text-base">ARShakir</p>
+          <ul className="flex gap-6">
             <li>
               <img src="/google.webp" alt="google icon" />
             </li>
@@ -345,12 +345,12 @@ export default function Home() {
           </ul>
         </div>
 
-        <div>
+        <div className="grid grid-cols-4 pb-24">
           {["First", "Second", "Third", "Fourth"].map((item, index) => {
             return <FooterMenu title={item} key={index}></FooterMenu>;
           })}
         </div>
-        <div>
+        <div className="flex gap-6 justify-center text-gray-300">
           <p>&copy; Copyrights 2021</p>
           <p>Privacy policy</p>
           <p>Terms of service</p>

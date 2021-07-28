@@ -5,8 +5,8 @@ type FooterMenuProps = {
 }
 export default function FooterMenu(props: FooterMenuProps) {
   return (
-    <ul>
-      <li>{props.title}</li>
+    <ul className="flex gap-4 text-white flex-col">
+      <li className="font-bold mb-2">{props.title}</li>
       <li>First Page</li>
       <li>Second Page</li>
       <li>Third Page</li>
