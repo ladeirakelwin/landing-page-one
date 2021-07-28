@@ -225,23 +225,23 @@ export default function Home() {
           </Button>
           <img src="/image-background-two.webp" alt="background icon two" className="z-0 absolute top-16"/>
         </section>
-        <section>
-          <div>
-            <h2>
+        <section id="omah-mukti" className="flex w-full px-36 mt-20 mb-28">
+          <div className="flex flex-col gap-8 w-2/5 ">
+            <h2 className="text-green-200 text-4xl font-bold leading-snug ">
               Invest property for better <YellowFont>business</YellowFont>
             </h2>
-            <p>
+            <p className="text-indigo-400 text-sm leading-loose">
               We are committed to processing the information in order to contact
               you and talk about your project. We are committed to processing
               the information.
             </p>
-            <Button type="primary" className="text-sm w-32 h-10">
+            <Button type="primary" className="text-sm w-32 h-12 font-bold">
               Learn More
             </Button>
           </div>
-          <div>
-            <img src="/omah-mukti.webp" alt="example image" />
-            <img src="/world-map.webp" alt="world map image" />
+          <div className="relative z-10 w-3/5 flex justify-end">
+            <img src="/omah-mukti.webp" alt="example image" className="relative z-10 h-5/6" />
+            <img src="/world-map.webp" alt="world map image"  className="z-0 absolute bottom-9 right-0 left-36 w-full h-full"/>
           </div>
         </section>
         <section>
