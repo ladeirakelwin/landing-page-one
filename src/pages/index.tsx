@@ -116,8 +116,8 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col">
-        <section id="hero" className="flex w-full pl-36 gap-10">
-          <div className="w-1/2">
+        <section id="hero" className="flex w-full pl-36 gap-10 relative z-10">
+          <div className="w-1/2 relative z-10">
             <div>
               <h1 className="text-5xl text-green-200 font-semibold">
                 Many reasons to get up and start to get back in the business
@@ -147,20 +147,25 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-1/2">
-            <img src="/run-image.webp" alt="" className="run-image" />
+            <img src="/run-image.webp" alt="" className="run-image " />
           </div>
+          <img src="/flash-brand-left.webp" alt="" className="absolute z-0 left-0 top-72 "/>
+          
         </section>
-        <section id="brands" className="flex w-full px-36 pb-20">
-          <ul className="flex flex-1 justify-evenly items-center">
+        <section id="brands" className="flex w-full px-36 pb-20 relative z-10">
+        
+          <ul className="flex flex-1 justify-evenly items-center z-10 relative">
             {brandImgs.map(([src, alt], index) => (
               <BrandItem key={index} src={src} alt={alt}></BrandItem>
             ))}
           </ul>
+          
         </section>
         <section
-          className="flex flex-col justify-center items-center gap-8 px-36 pb-36"
+          className="flex flex-col justify-center items-center gap-8 px-36 pb-36 relative z-10"
           id="your-choice"
         >
+          <img src="/flash-brand-right.webp" alt="" className="absolute z-0 right-0 bottom-40"/>
           <div className="flex flex-col text-center gap-4">
             <h2 className="text-green-200 text-5xl font-semibold">
               Your choice
@@ -170,7 +175,7 @@ export default function Home() {
               about your situation.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4  relative z-10">
             {yccInfos.map(([src, alt, title, subtitle], index) => (
               <Card
                 src={src}
@@ -185,7 +190,7 @@ export default function Home() {
         </section>
         <section
           id="suggest"
-          className="px-36 items-center justify-center flex pb-36"
+          className="px-36 items-center justify-center flex pb-36 z-10"
         >
           <div className="flex flex-col gap-8 w-1/2">
             <h2 className="text-green-200 text-5xl font-semibold">
