@@ -5,8 +5,17 @@ import ResultsCard from "../components/ResultsCard";
 import Card from "../components/Card";
 import YellowFont from "../components/YellowFont";
 import FooterMenu from "../components/FooterMenu";
+import { MouseEvent} from "react";
 
 export default function Home() {
+  const isHidden  = (event) => {
+    event.preventDefault()
+    const nav = document.getElementById("nav");
+    const buttonsNav = document.getElementById("buttons-nav");
+    nav.classList.toggle("hidden");
+    buttonsNav.classList.toggle("hidden");
+  }
+
   const brandImgs = [
     ["/profitwell.webp", "profitwell icon"],
     ["/appcues.webp", "appcues icon"],
@@ -88,18 +97,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex flex-1  justify-between w-full pb-16 px-36">
-        <div className="flex gap-10 items-center">
+      <header className="flex flex-1 flex-wrap  w-full pb-16 px-12  sm:px-24 md:px-36 relative">
+        <div className="block">
           <img src="/logo.webp" className="h-9 w-9" alt="" />
-          <ul className="flex gap-3 items-center text-white">
-            <li>About</li>
-            <li>Gallery</li>
-            <li>Pricing</li>
-            <li>FAQ</li>
-            <li>Benefits</li>
-          </ul>
         </div>
-        <div className="flex gap-5 ">
+        <button className="inline-block ml-auto lg:hidden w-8 h-8 rounded-lg bg-white text-yellow-500 p-1" onClick={isHidden}>
+          <svg
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          id="nav"
+          className="flex lg:flex flex-col  my-4 lg:my-0 w-full lg:w-auto lg:flex-row lg:ml-10 lg:mr-auto gap-3 lg:items-center text-white hidden"
+        >
+          <li>About</li>
+          <li>Gallery</li>
+          <li>Pricing</li>
+          <li>FAQ</li>
+          <li>Benefits</li>
+        </ul>
+        <div
+          id="buttons-nav"
+          className="flex lg:flex w-full lg:w-auto gap-5 flex-col lg:flex-row hidden"
+        >
           <Button
             type="secondary"
             className="text-yellow-500 text-sm w-24 h-9 font-medium"
@@ -149,23 +177,28 @@ export default function Home() {
           <div className="relative w-1/2">
             <img src="/run-image.webp" alt="" className="run-image " />
           </div>
-          <img src="/flash-brand-left.webp" alt="" className="absolute z-0 left-0 top-72 "/>
-          
+          <img
+            src="/flash-brand-left.webp"
+            alt=""
+            className="absolute z-0 left-0 top-72 "
+          />
         </section>
         <section id="brands" className="flex w-full px-36 pb-20 relative z-10">
-        
           <ul className="flex flex-1 justify-evenly items-center z-10 relative">
             {brandImgs.map(([src, alt], index) => (
               <BrandItem key={index} src={src} alt={alt}></BrandItem>
             ))}
           </ul>
-          
         </section>
         <section
           className="flex flex-col justify-center items-center gap-8 px-36 pb-36 relative z-10"
           id="your-choice"
         >
-          <img src="/flash-brand-right.webp" alt="" className="absolute z-0 right-0 bottom-40"/>
+          <img
+            src="/flash-brand-right.webp"
+            alt=""
+            className="absolute z-0 right-0 bottom-40"
+          />
           <div className="flex flex-col text-center gap-4">
             <h2 className="text-green-200 text-5xl font-semibold">
               Your choice
@@ -313,7 +346,9 @@ export default function Home() {
         <section id="form-section" className="px-36 flex flex-col flex-1 mb-36">
           <div className="rounded-md bg-indigo-700 text-center py-16 gap-8 w-full items-center">
             <div>
-              <h2 className="text-yellow-500 text-4xl font-bold mb-4">There are many reasons to get down</h2>
+              <h2 className="text-yellow-500 text-4xl font-bold mb-4">
+                There are many reasons to get down
+              </h2>
               <p className="text-indigo-200 text-sm w-1/2 mx-auto mb-4">
                 There are many reasons to get down and start to get depressed
                 about your situation.
@@ -321,14 +356,23 @@ export default function Home() {
             </div>
             <div>
               <form className="flex justify-center pb-4">
-                <input type="email" placeholder="Your Email" className="flex w-1/3 p-4 rounded-l-sm border-0 bg-gray-600"/>
-                <Button type="primary" className="text-sm w-32 flex border-0 items-center justify-center font-bold">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="flex w-1/3 p-4 rounded-l-sm border-0 bg-gray-600"
+                />
+                <Button
+                  type="primary"
+                  className="text-sm w-32 flex border-0 items-center justify-center font-bold"
+                >
                   SEND
                 </Button>
               </form>
             </div>
             <div>
-              <p className="mx-auto text-sm text-indigo-200">No spam. Only releases, updates and discounts</p>
+              <p className="mx-auto text-sm text-indigo-200">
+                No spam. Only releases, updates and discounts
+              </p>
             </div>
           </div>
         </section>
