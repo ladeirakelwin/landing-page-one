@@ -183,7 +183,7 @@ export default function Home() {
             className="absolute z-0 left-0 top-72 hidden lg:block"
           />
         </section>
-        <section id="brands" className="flex w-full px-36 pb-20 relative z-10 ">
+        <section id="brands" className="flex w-full px-12  sm:px-24 lg:pl-36 pb-20 relative z-10 ">
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 place-content-center	 flex-1 gap-8 justify-evenly items-center z-10 relative">
             {brandImgs.map(([src, alt], index) => (
               <BrandItem key={index} src={src} alt={alt}></BrandItem>
@@ -191,7 +191,7 @@ export default function Home() {
           </ul>
         </section>
         <section
-          className="flex flex-col justify-center items-center gap-8 px-36 pb-36 relative z-10"
+          className="flex flex-col justify-center items-center gap-8 px-12  sm:px-24 lg:pl-36 pb-36 relative z-10"
           id="your-choice"
         >
           <img
@@ -208,7 +208,7 @@ export default function Home() {
               about your situation.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-4  relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  relative z-10">
             {yccInfos.map(([src, alt, title, subtitle], index) => (
               <Card
                 src={src}
