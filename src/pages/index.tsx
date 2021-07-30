@@ -97,7 +97,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex flex-1 flex-wrap  w-full pb-16 px-12  sm:px-24 md:px-36 relative">
+      <header className="flex flex-1 flex-wrap  w-full pb-16 px-12  sm:px-24 lg:px-36 relative">
         <div className="block">
           <img src="/logo.webp" className="h-9 w-9" alt="" />
         </div>
@@ -144,8 +144,8 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col">
-        <section id="hero" className="flex w-full pl-36 gap-10 relative z-10">
-          <div className="w-1/2 relative z-10">
+        <section id="hero" className="flex w-full px-12  sm:px-24 lg:pl-36 gap-10 relative z-10">
+          <div className="w-full lg:w-1/2 relative z-10">
             <div>
               <h1 className="text-5xl text-green-200 font-semibold">
                 Many reasons to get up and start to get back in the business
@@ -174,13 +174,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative w-1/2">
+          <div className="relative w-0 lg:w-1/2 hidden lg:block">
             <img src="/run-image.webp" alt="" className="run-image " />
           </div>
           <img
             src="/flash-brand-left.webp"
             alt=""
-            className="absolute z-0 left-0 top-72 "
+            className="absolute z-0 left-0 top-72 w-0 lg:w-full hidden lg:block"
           />
         </section>
         <section id="brands" className="flex w-full px-36 pb-20 relative z-10">
