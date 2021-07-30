@@ -223,9 +223,9 @@ export default function Home() {
         </section>
         <section
           id="suggest"
-          className="px-36 items-center justify-center flex pb-36 z-10"
+          className="px-12  sm:px-24 lg:pl-36 items-center justify-center flex flex-col md:flex-row  pb-36 z-10"
         >
-          <div className="flex flex-col gap-8 w-1/2">
+          <div className="flex flex-col gap-8 w-1/2 mb-8 md:mb-0">
             <h2 className="text-green-200 text-5xl font-semibold">
               Increase your business <YellowFont>traffic</YellowFont>
             </h2>
