@@ -144,7 +144,7 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col">
-        <section id="hero" className="flex w-full px-12  sm:px-24 lg:pl-36 gap-10 relative z-10">
+        <section id="hero" className="flex w-full px-12  sm:px-24 lg:pl-36 gap-10 relative z-10 mb-24">
           <div className="w-full lg:w-1/2 relative z-10">
             <div>
               <h1 className="text-5xl text-green-200 font-semibold">
@@ -180,11 +180,11 @@ export default function Home() {
           <img
             src="/flash-brand-left.webp"
             alt=""
-            className="absolute z-0 left-0 top-72 w-0 lg:w-full hidden lg:block"
+            className="absolute z-0 left-0 top-72 hidden lg:block"
           />
         </section>
-        <section id="brands" className="flex w-full px-36 pb-20 relative z-10">
-          <ul className="flex flex-1 justify-evenly items-center z-10 relative">
+        <section id="brands" className="flex w-full px-36 pb-20 relative z-10 ">
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 place-content-center	 flex-1 gap-8 justify-evenly items-center z-10 relative">
             {brandImgs.map(([src, alt], index) => (
               <BrandItem key={index} src={src} alt={alt}></BrandItem>
             ))}
@@ -197,7 +197,7 @@ export default function Home() {
           <img
             src="/flash-brand-right.webp"
             alt=""
-            className="absolute z-0 right-0 bottom-40"
+            className="absolute z-0 right-0 bottom-40 hidden lg:block"
           />
           <div className="flex flex-col text-center gap-4">
             <h2 className="text-green-200 text-5xl font-semibold">

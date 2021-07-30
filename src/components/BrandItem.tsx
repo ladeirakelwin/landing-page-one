@@ -8,7 +8,7 @@ type BrandItemProps = {
 export default function BrandItem(props: BrandItemProps) {
 
   return (
-    <li>
+    <li className="flex justify-center">
       <img {...props} className="w-20 h-6" />
     </li>
   );
