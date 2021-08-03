@@ -7,3 +7,21 @@
   font-family: "Poppins", sans-serif;
 }
 
+@layer components {
+  .spacing-hero {
+    @apply px-12  sm:px-24 lg:pl-36 lg:pr-0;
+  }
+  .spacing-width {
+    @apply px-12  sm:px-24 lg:px-36;
+  }
+
+  .spacing-height {
+    @apply pb-12 sm:pb-20 lg:pb-36;
+  }
+
+  .spacing-c2a {
+    @apply mb-20 sm:mb-60 md:mb-80;
+  }
+
+
+}

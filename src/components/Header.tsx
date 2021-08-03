@@ -10,7 +10,7 @@ export default function Header() {
   const [show, setShow] = useState(false);
 
   return (
-    <header className="flex flex-1 flex-wrap  w-full pb-16 px-12  sm:px-24 lg:px-36 relative">
+    <header className="flex flex-1 flex-wrap  w-full pb-16 spacing-width relative">
         <Image src={logo} layout="fixed" alt="logo do site"></Image>
         <button
           className="inline-block ml-auto lg:hidden w-8 h-8 rounded-lg bg-white text-yellow-500 p-1"
