@@ -307,7 +307,7 @@ export default function Home() {
         </section>
         <section
           id="help"
-          className="flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left spacing-width spacing-height"
+          className="flex flex-col md:flex-row gap-8 items-center text-center lg:text-left spacing-width spacing-height"
         >
           <div className="w-1/2 min-h-omah min-w-omah">
             <Image
@@ -316,11 +316,11 @@ export default function Home() {
               className="min-h-omah min-w-omah"
             ></Image>
           </div>
-          <div className="w-1/2 flex justify-center flex-col gap-10 text-left ">
-            <h2 className="text-green-200 text-2xl font-semibold mx-auto">
+          <div className="w-1/2 flex justify-center flex-col gap-8 text-left ">
+            <h2 className="base-title text-2xl  mx-auto text-center">
               Help Finding Information Online
             </h2>
-            <p className="text-sm text-indigo-400 w-4/5 mx-auto">
+            <p className="base-description text-xs w-4/5 mx-auto text-center md:text-left">
               Fully customizable and neatly organized components will help you
               work faster without limiting creative freedom.
             </p>

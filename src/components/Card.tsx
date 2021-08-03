@@ -24,8 +24,8 @@ export default function Card(props: CardProps) {
     <div className="flex gap-4 flex-col w-5/6  mx-auto">
       <img className="w-6 h-6 font-semibold" src={props.src} alt={props.alt}/>
       <div className="flex flex-1 flex-col gap-2">
-        <h4 className="base-card">{props.title}</h4>
-        <p className="base-card-description">{props.subtitle}</p>
+        <h4 className="base-card-title">{props.title}</h4>
+        <p className="base-card-description text-xs">{props.subtitle}</p>
       </div>
     </div>
   );
