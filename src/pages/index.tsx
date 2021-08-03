@@ -5,9 +5,7 @@ import ResultsCard from "../components/ResultsCard";
 import Card from "../components/Card";
 import YellowFont from "../components/YellowFont";
 import FooterMenu from "../components/FooterMenu";
-import { useState } from "react";
 import runImage from "@images/run-image.webp";
-import logo from "@images/logo.webp";
 import profit from "@images/profitwell.webp";
 import appcues from "@images/appcues.webp";
 import shipbob from "@images/shipbob.webp";
@@ -25,10 +23,11 @@ import flashBackLeft from "@images/flash-brand-left.webp";
 import google from "@images/google.webp";
 import twitter from "@images/twitter.webp";
 import facebook from "@images/facebook.webp";
+import Header from "src/components/Header";
+import Footer from "src/components/Footer";
 // estudar componentes do next
 
 export default function Home() {
-  const [show, setShow] = useState(false);
 
   const yccInfos = [
     {
@@ -110,57 +109,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex flex-1 flex-wrap  w-full pb-16 px-12  sm:px-24 lg:px-36 relative">
-        <Image src={logo} layout="fixed" alt="logo do site"></Image>
-        <button
-          className="inline-block ml-auto lg:hidden w-8 h-8 rounded-lg bg-white text-yellow-500 p-1"
-          onClick={() => setShow(!show)}
-        >
-          <svg
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <ul
-          id="nav"
-          className={` lg:flex flex-col  my-4 lg:my-0 w-full lg:w-auto lg:flex-row lg:ml-10 lg:mr-auto gap-3 lg:items-center text-white ${
-            show ? "flex" : "hidden"
-          }`}
-        >
-          <li>About</li>
-          <li>Gallery</li>
-          <li>Pricing</li>
-          <li>FAQ</li>
-          <li>Benefits</li>
-        </ul>
-        <div
-          id="buttons-nav"
-          className={`lg:flex w-full lg:w-auto gap-5 flex-col lg:flex-row ${
-            show ? "flex" : "hidden"
-          }`}
-        >
-          <Button
-            type="secondary"
-            className="text-yellow-500 text-sm w-24 h-9 font-medium"
-          >
-            Sign In
-          </Button>
-          <Button
-            type="primary"
-            className="text-white text-sm w-24 h-9 font-medium"
-          >
-            Sign Up
-          </Button>
-        </div>
-      </header>
-
+      <Header></Header>
+      
       <main className="flex flex-col max-w-full">
         <section
           id="hero"
@@ -444,33 +394,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex flex-col w-full px-12  sm:px-24 lg:px-36">
-        <div className="flex flex-col md:flex-row gap-10 items-center sm:justify-between w-full pb-24">
-          <p className="text-yellow-500 font-bold text-base">ARShakir</p>
-          <ul className="flex gap-6">
-            <li>
-              <Image src={google} alt="google icon"></Image>
-            </li>
-            <li>
-              <Image src={twitter} alt="twitter icon" />
-            </li>
-            <li>
-              <Image src={facebook} alt="facebook icon" />
-            </li>
-          </ul>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 pb-24 gap-10">
-          {["First", "Second", "Third", "Fourth"].map((item, index) => {
-            return <FooterMenu title={item} key={index}></FooterMenu>;
-          })}
-        </div>
-        <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start sm:justify-center text-gray-300">
-          <p>&copy; Copyrights 2021</p>
-          <p>Privacy policy</p>
-          <p>Terms of service</p>
-        </div>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }
