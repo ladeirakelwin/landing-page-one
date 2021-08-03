@@ -317,10 +317,10 @@ export default function Home() {
             ></Image>
           </div>
           <div className="w-1/2 flex justify-center flex-col gap-8 text-left items-center ">
-            <h2 className="base-title text-2xl   text-center">
+            <h2 className="base-title lg:text-3xl xl:text-5xl   text-center">
               Help Finding Information Online
             </h2>
-            <p className="base-description text-xs w-4/5 mx-auto text-center md:text-left">
+            <p className="base-description lg:text-base xl:text-xl w-4/5 mx-auto text-center md:text-left">
               Fully customizable and neatly organized components will help you
               work faster without limiting creative freedom.
             </p>
