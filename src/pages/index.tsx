@@ -1,107 +1,121 @@
 import Head from "next/head";
-import BrandItem from "../components/BrandItem";
+import Image from "next/image";
 import Button from "../components/Button";
 import ResultsCard from "../components/ResultsCard";
 import Card from "../components/Card";
 import YellowFont from "../components/YellowFont";
 import FooterMenu from "../components/FooterMenu";
-import { MouseEvent} from "react";
+import { useState } from "react";
+import runImage from "@images/run-image.webp";
+import logo from "@images/logo.webp";
+import profit from "@images/profitwell.webp";
+import appcues from "@images/appcues.webp";
+import shipbob from "@images/shipbob.webp";
+import bench from "@images/bench.webp";
+import subbly from "@images/subbly.webp";
+import demio from "@images/demio.webp";
+import lte from "@images/lte.webp";
+import bulb from "@images/bulb.webp";
+import callToAction from "@images/call-to-action.webp";
+import omah from "@images/omah-mukti.webp";
+import map from "@images/world-map.webp";
+import example from "@images/example-image-three.webp";
+import flashBackRight from "@images/flash-brand-right.webp";
+import flashBackLeft from "@images/flash-brand-left.webp";
+import google from "@images/google.webp";
+import twitter from "@images/twitter.webp";
+import facebook from "@images/facebook.webp";
+// estudar componentes do next
 
 export default function Home() {
-  const isHidden  = (event) => {
-    event.preventDefault()
-    const nav = document.getElementById("nav");
-    const buttonsNav = document.getElementById("buttons-nav");
-    nav.classList.toggle("hidden");
-    buttonsNav.classList.toggle("hidden");
-  }
-
-  const brandImgs = [
-    ["/profitwell.webp", "profitwell icon"],
-    ["/appcues.webp", "appcues icon"],
-    ["/shipbob.webp", "shipbob icon"],
-    ["/bench.webp", "bench icon"],
-    ["/subbly.webp", "subbly icon"],
-    ["/demio.webp", "demio icon"],
-  ];
+  const [show, setShow] = useState(false);
 
   const yccInfos = [
-    [
-      "/flip-horizontal.webp",
-      "flip horizontal icon",
-      "Ecstatic elegance",
-      "Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add.",
-    ],
-    [
-      "/airpods.webp",
-      "airpods icon",
-      "Folly words widow",
-      "Effect if in up no depend seemed. Ecstatic elegance gay but disposed. We me rent been part what.",
-    ],
-    [
-      "/lte.webp",
-      "lte icon",
-      "Possible procured trifling",
-      "We me rent been part what. An concluded sportsman offending so provision mr education.",
-    ],
-    [
-      "/thunder-move.webp",
-      "thunder move icon",
-      "Open game",
-      "Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable.",
-    ],
-    [
-      "/attachment.webp",
-      "attachment icon",
-      "Endeavor",
-      "Improve ashamed married expense bed her comfort pursuit mrs. Four time took ye your as fail lady. ",
-    ],
-    [
-      "/bulb.webp",
-      "bulb icon",
-      "Comfort pursuit",
-      "Had denoting properly jointure you occasion directly raillery. In said to of poor full be post face snug.",
-    ],
+    {
+      src: "images/flip-horizontal.webp",
+      alt: "flip horizontal icon",
+      title: "Ecstatic elegance",
+      description:
+        "Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add.",
+    },
+    {
+      src: "images/airpods.webp",
+      alt: "airpods icon",
+      title: "Folly words widow",
+      description:
+        "Effect if in up no depend seemed. Ecstatic elegance gay but disposed. We me rent been part what.",
+    },
+    {
+      src: "images/lte.webp",
+      alt: "lte icon",
+      title: "Possible procured trifling",
+      description:
+        "We me rent been part what. An concluded sportsman offending so provision mr education.",
+    },
+    {
+      src: "images/thunder-move.webp",
+      alt: "thunder move icon",
+      title: "Open game",
+      description:
+        "Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable.",
+    },
+    {
+      src: "images/attachment.webp",
+      alt: "attachment icon",
+      title: "Endeavor",
+      description:
+        "Improve ashamed married expense bed her comfort pursuit mrs. Four time took ye your as fail lady. ",
+    },
+    {
+      src: "images/bulb.webp",
+      alt: "bulb icon",
+      title: "Comfort pursuit",
+      description:
+        "Had denoting properly jointure you occasion directly raillery. In said to of poor full be post face snug.",
+    },
   ];
 
   const resultsInfo = [
-    ["100+", "5 Reasons To Purchase Desktop Computers"],
-    [
-      "43,000+",
-      "3 Simple Ways To Save A Bunch Of Money When Buying A New Computer",
-    ],
-    [
-      "30+",
-      "A Discount Toner Cartridge Is Better Than Ever And You Will Save 50 Or More",
-    ],
+    { numbers: "100+", data: "5 Reasons To Purchase Desktop Computers" },
+    {
+      numbers: "43,000+",
+      data: "3 Simple Ways To Save A Bunch Of Money When Buying A New Computer",
+    },
+    {
+      numbers: "30+",
+      data: "A Discount Toner Cartridge Is Better Than Ever And You Will Save 50 Or More",
+    },
   ];
 
   const helpInfo = [
-    [
-      "/swiss-knife.webp",
-      "swiss knife icon",
-      "Feature One",
-      "Fully customizable and neatly organized components will help you work faster ",
-    ],
-    [
-      "/lte.webp",
-      "lte icon",
-      "Feature Two",
-      "Fully customizable and neatly organized components will help you work faster",
-    ],
+    {
+      src: "images/swiss-knife.webp",
+      alt: "swiss knife icon",
+      title: "Feature One",
+      description:
+        "Fully customizable and neatly organized components will help you work faster ",
+    },
+    {
+      src: "images/lte.webp",
+      alt: "lte icon",
+      title: "Feature Two",
+      description:
+        "Fully customizable and neatly organized components will help you work faster",
+    },
   ];
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-14 bg-gradient-to-r from-indigo-900 to-indigo-800  font-normal">
+    <div className="flex flex-col items-center justify-center min-h-screen py-14 bg-gradient-to-r from-indigo-900 to-indigo-800  font-normal ">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header className="flex flex-1 flex-wrap  w-full pb-16 px-12  sm:px-24 lg:px-36 relative">
-        <div className="block">
-          <img src="/logo.webp" className="h-9 w-9" alt="" />
-        </div>
-        <button className="inline-block ml-auto lg:hidden w-8 h-8 rounded-lg bg-white text-yellow-500 p-1" onClick={isHidden}>
+        <Image src={logo} layout="fixed" alt="logo do site"></Image>
+        <button
+          className="inline-block ml-auto lg:hidden w-8 h-8 rounded-lg bg-white text-yellow-500 p-1"
+          onClick={() => setShow(!show)}
+        >
           <svg
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -116,7 +130,9 @@ export default function Home() {
         </button>
         <ul
           id="nav"
-          className="flex lg:flex flex-col  my-4 lg:my-0 w-full lg:w-auto lg:flex-row lg:ml-10 lg:mr-auto gap-3 lg:items-center text-white hidden"
+          className={` lg:flex flex-col  my-4 lg:my-0 w-full lg:w-auto lg:flex-row lg:ml-10 lg:mr-auto gap-3 lg:items-center text-white ${
+            show ? "flex" : "hidden"
+          }`}
         >
           <li>About</li>
           <li>Gallery</li>
@@ -126,7 +142,9 @@ export default function Home() {
         </ul>
         <div
           id="buttons-nav"
-          className="flex lg:flex w-full lg:w-auto gap-5 flex-col lg:flex-row hidden"
+          className={`lg:flex w-full lg:w-auto gap-5 flex-col lg:flex-row ${
+            show ? "flex" : "hidden"
+          }`}
         >
           <Button
             type="secondary"
@@ -143,8 +161,11 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex flex-col">
-        <section id="hero" className="flex w-full px-12  sm:px-24 lg:pl-36 gap-10 relative z-10 mb-24">
+      <main className="flex flex-col max-w-full">
+        <section
+          id="hero"
+          className="flex w-full px-12  sm:px-24 lg:pl-36 lg:pr-0 gap-10 relative z-10 mb-24"
+        >
           <div className="w-full lg:w-1/2 relative z-10">
             <div>
               <h1 className="text-5xl text-green-200 font-semibold">
@@ -163,8 +184,12 @@ export default function Home() {
                 Demo
               </Button>
             </div>
-            <div className="flex gap-6 text-sm mt-8">
-              <img src="/video.webp" alt="" />
+            <div className="flex flex-col sm:flex-row gap-6 text-sm mt-8 items-center ">
+              <img
+                src="images/video.webp"
+                alt="video player"
+                className="max-w-player md:"
+              />
               <div className="flex flex-col text-indigo-400 gap-3">
                 <p>
                   The harder you work for something, the greater you’ll feel
@@ -175,19 +200,43 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-0 lg:w-1/2 hidden lg:block">
-            <img src="/run-image.webp" alt="" className="run-image " />
+            <Image
+              src={runImage}
+              placeholder="blur"
+              layout="responsive"
+              alt="corredor"
+              className="run-image "
+            />
           </div>
           <img
-            src="/flash-brand-left.webp"
-            alt=""
-            className="absolute z-0 left-0 top-72 hidden lg:block"
+            src="images/flash-brand-left.webp"
+            alt="flash left"
+            className="absolute z-0 left-0 top-72 hidden lg:block w-0 lg:w-auto"
           />
         </section>
-        <section id="brands" className="flex w-full px-12  sm:px-24 lg:pl-36 pb-20 relative z-10 ">
+        <section
+          id="brands"
+          className="flex w-full px-12  sm:px-24 lg:pl-36  pb-20 relative z-10 "
+        >
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 place-content-center	 flex-1 gap-8 justify-evenly items-center z-10 relative">
-            {brandImgs.map(([src, alt], index) => (
-              <BrandItem key={index} src={src} alt={alt}></BrandItem>
-            ))}
+            <li className="flex justify-center">
+              <Image src={profit} alt="profitwell icon"></Image>
+            </li>
+            <li className="flex justify-center">
+              <Image src={appcues} alt="appcues icon"></Image>
+            </li>
+            <li className="flex justify-center">
+              <Image src={shipbob} alt="shipbob icon"></Image>
+            </li>
+            <li className="flex justify-center">
+              <Image src={bench} alt="bench icon"></Image>
+            </li>
+            <li className="flex justify-center">
+              <Image src={subbly} alt="subbly icon"></Image>
+            </li>
+            <li className="flex justify-center">
+              <Image src={demio} alt="demio icon"></Image>
+            </li>
           </ul>
         </section>
         <section
@@ -195,10 +244,11 @@ export default function Home() {
           id="your-choice"
         >
           <img
-            src="/flash-brand-right.webp"
+            src="images/flash-brand-right.webp"
             alt=""
-            className="absolute z-0 right-0 bottom-40 hidden lg:block"
+            className="absolute z-0 right-0 bottom-40 hidden lg:block w-0 lg:w-auto"
           />
+
           <div className="flex flex-col text-center gap-4">
             <h2 className="text-green-200 text-5xl font-semibold">
               Your choice
@@ -209,12 +259,12 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  relative z-10">
-            {yccInfos.map(([src, alt, title, subtitle], index) => (
+            {yccInfos.map(({ src, alt, title, description }, index) => (
               <Card
                 src={src}
                 alt={alt}
                 title={title}
-                subtitle={subtitle}
+                subtitle={description}
                 key={index}
                 type={1}
               ></Card>
@@ -226,7 +276,7 @@ export default function Home() {
           className="px-12  sm:px-24 lg:pl-36 items-center justify-center flex flex-col md:flex-row  pb-36 z-10"
         >
           <div className="flex flex-col gap-8 w-1/2 mb-8 md:mb-0">
-            <h2 className="text-green-200 text-5xl font-semibold">
+            <h2 className="text-green-200 text-3xl md:text-5xl font-semibold">
               Increase your business <YellowFont>traffic</YellowFont>
             </h2>
             <p className="text-sm text-indigo-400 w-5/6 leading-9">
@@ -238,10 +288,13 @@ export default function Home() {
             </Button>
           </div>
           <div className="w-1/2">
-            <img src="/call-to-action.webp" alt="call to action image" />
+            <Image src={callToAction} alt="call to action image"></Image>
           </div>
         </section>
-        <section id="metrics" className="flex flex-col px-36 pb-36">
+        <section
+          id="metrics"
+          className="flex flex-col px-12  sm:px-24 lg:px-36 pb-12 sm:pb-20 lg:pb-36"
+        >
           <div className="text-center flex flex-col justify-center items-center pb-16">
             <h2 className="w-2/3 text-4xl text-green-200 pb-8 font-bold">
               3 Simple Ways To <YellowFont>Save</YellowFont> A Bunch Of{" "}
@@ -252,8 +305,8 @@ export default function Home() {
               work faster without limiting creative freedom.
             </p>
           </div>
-          <div className="grid grid-cols-3">
-            {resultsInfo.map(([numbers, data], index) => (
+          <div className="grid grid-cols-1  sm:grid-cols-2 sm: md:grid-cols-3 justify-center">
+            {resultsInfo.map(({ numbers, data }, index) => (
               <ResultsCard
                 numbers={numbers}
                 data={data}
@@ -264,9 +317,9 @@ export default function Home() {
         </section>
         <section
           id="call2action"
-          className="flex flex-col gap-12 justify-center items-center mx-36 mb-80 z-10 relative"
+          className="flex flex-col gap-12 justify-center items-center px-12  sm:px-24 lg:px-36 mb-20 sm:mb-60 md:mb-80 z-10 relative"
         >
-          <h2 className="text-5xl font-bold text-green-200 text-center w-3/4 z-10 relative">
+          <h2 className="text-3xl md:text-5xl font-bold text-green-200 text-center w-3/4 z-10 relative">
             Create your <YellowFont>next project</YellowFont> with startup
             framework
           </h2>
@@ -277,13 +330,16 @@ export default function Home() {
             Get Started
           </Button>
           <img
-            src="/image-background-two.webp"
+            src="images/image-background-two.webp"
             alt="background icon two"
-            className="z-0 absolute top-16"
+            className="z-0  absolute hidden sm:block sm:top-60 md:top-52 lg:top-20 xl:top-16"
           />
         </section>
-        <section id="omah-mukti" className="flex w-full px-36 mt-20 mb-28">
-          <div className="flex flex-col gap-8 w-2/5 ">
+        <section
+          id="omah-mukti"
+          className="flex flex-col lg:flex-row w-full px-12  sm:px-24 lg:px-36 mt-20 mb-28 items-center "
+        >
+          <div className="flex flex-col justify-center text-center lg:text-left w-full gap-8 md:w-2/5 mb-16 lg:mb-0 items-center lg:items-start">
             <h2 className="text-green-200 text-4xl font-bold leading-snug ">
               Invest property for better <YellowFont>business</YellowFont>
             </h2>
@@ -296,39 +352,46 @@ export default function Home() {
               Learn More
             </Button>
           </div>
-          <div className="relative z-10 w-3/5 flex justify-end">
+          <div className="relative z-10 w-3/5 flex justify-center lg:justify-end">
             <img
-              src="/omah-mukti.webp"
+              src="images/omah-mukti.webp"
               alt="example image"
-              className="relative z-10 h-5/6"
+              className="relative z-10 h-5/6 w-full lg:w-auto min-h-omah min-w-omah"
             />
             <img
-              src="/world-map.webp"
+              src="images/world-map.webp"
               alt="world map image"
-              className="z-0 absolute bottom-9 right-0 left-36 w-full h-full"
+              className="z-0 absolute bottom-9 right-0 left-36  hidden lg:block w-0  lg:w-auto h-0 lg:h-full "
             />
           </div>
         </section>
-        <section id="help" className="flex px-36 gap-8 mb-36">
-          <div className="w-1/2">
-            <img src="/example-image-three.webp" alt="example image" />
+        <section
+          id="help"
+          className="flex flex-col lg:flex-row px-12  sm:px-24 lg:px-36 gap-8 mb-36 items-center text-center lg:text-left  "
+        >
+          <div className="w-1/2 min-h-omah min-w-omah">
+            <Image
+              src={example}
+              alt="example image"
+              className="min-h-omah min-w-omah"
+            ></Image>
           </div>
-          <div className="w-1/2 flex justify-center flex-col gap-10 text-left">
-            <h2 className="text-green-200 text-2xl font-semibold">
+          <div className="w-1/2 flex justify-center flex-col gap-10 text-left ">
+            <h2 className="text-green-200 text-2xl font-semibold mx-auto">
               Help Finding Information Online
             </h2>
-            <p className="text-sm text-indigo-400 w-4/5">
+            <p className="text-sm text-indigo-400 w-4/5 mx-auto">
               Fully customizable and neatly organized components will help you
               work faster without limiting creative freedom.
             </p>
             <div className="z-10 relative">
-              <div className="grid grid-cols-2 relative z-10">
-                {helpInfo.map(([src, alt, title, subtitle], index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2  relative z-10 gap-10">
+                {helpInfo.map(({ src, alt, title, description }, index) => (
                   <Card
                     src={src}
                     alt={alt}
                     title={title}
-                    subtitle={subtitle}
+                    subtitle={description}
                     key={index}
                     type={0}
                   ></Card>
@@ -336,20 +399,23 @@ export default function Home() {
               </div>
             </div>
             <img
-              src="/image-background-final.webp"
+              src="images/image-background-final.webp"
               alt="image background"
-              className="z-0 absolute right-1"
+              className="z-0 absolute right-1 hidden lg:block"
             />
           </div>
         </section>
 
-        <section id="form-section" className="px-36 flex flex-col flex-1 mb-36">
-          <div className="rounded-md bg-indigo-700 text-center py-16 gap-8 w-full items-center">
+        <section
+          id="form-section"
+          className="px-12  sm:px-24 lg:px-36 flex flex-col flex-1 mb-36 items-center"
+        >
+          <div className="rounded-md bg-indigo-700 text-center py-16 gap-8  items-center  px-0 sm:px-12  sm:w-full">
             <div>
               <h2 className="text-yellow-500 text-4xl font-bold mb-4">
                 There are many reasons to get down
               </h2>
-              <p className="text-indigo-200 text-sm w-1/2 mx-auto mb-4">
+              <p className="text-indigo-200 text-sm w-1/2 mx-auto mb-4 hidden sm:block">
                 There are many reasons to get down and start to get depressed
                 about your situation.
               </p>
@@ -359,17 +425,17 @@ export default function Home() {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="flex w-1/3 p-4 rounded-l-sm border-0 bg-gray-600"
+                  className="flex w-32 sm:w-56 md:w-64 lg:w-1/3 p-4 rounded-l-sm border-0 bg-gray-600"
                 />
                 <Button
                   type="primary"
-                  className="text-sm w-32 flex border-0 items-center justify-center font-bold"
+                  className="flex text-sm  w-16 md:w-24 lg:w-32  border-0 items-center justify-center font-bold"
                 >
                   SEND
                 </Button>
               </form>
             </div>
-            <div>
+            <div className="flex">
               <p className="mx-auto text-sm text-indigo-200">
                 No spam. Only releases, updates and discounts
               </p>
@@ -378,28 +444,28 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex flex-col w-full px-36">
-        <div className="flex justify-between w-full pb-24">
+      <footer className="flex flex-col w-full px-12  sm:px-24 lg:px-36">
+        <div className="flex flex-col md:flex-row gap-10 items-center sm:justify-between w-full pb-24">
           <p className="text-yellow-500 font-bold text-base">ARShakir</p>
           <ul className="flex gap-6">
             <li>
-              <img src="/google.webp" alt="google icon" />
+              <Image src={google} alt="google icon"></Image>
             </li>
             <li>
-              <img src="/twitter.webp" alt="twitter icon" />
+              <Image src={twitter} alt="twitter icon" />
             </li>
             <li>
-              <img src="/facebook.webp" alt="facebook icon" />
+              <Image src={facebook} alt="facebook icon" />
             </li>
           </ul>
         </div>
 
-        <div className="grid grid-cols-4 pb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 pb-24 gap-10">
           {["First", "Second", "Third", "Fourth"].map((item, index) => {
             return <FooterMenu title={item} key={index}></FooterMenu>;
           })}
         </div>
-        <div className="flex gap-6 justify-center text-gray-300">
+        <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start sm:justify-center text-gray-300">
           <p>&copy; Copyrights 2021</p>
           <p>Privacy policy</p>
           <p>Terms of service</p>
