@@ -215,7 +215,7 @@ export default function Home() {
           id="suggest"
           className="items-center justify-center flex flex-col md:flex-row z-10 spacing-width spacing-height"
         >
-          <div className="flex flex-col gap-8 w-1/2 mb-8 md:mb-0 items-center md:items-left">
+          <div className="flex flex-col gap-8 w-1/2 mb-8 md:mb-0 items-center md:items-start">
             <h2 className="base-title text-center md:text-left">
               Increase your business <YellowFont>traffic</YellowFont>
             </h2>
@@ -283,7 +283,7 @@ export default function Home() {
             <h2 className="base-title leading-snug ">
               Invest property for better <YellowFont>business</YellowFont>
             </h2>
-            <p className="text-indigo-400 text-sm leading-loose">
+            <p className="base-description leading-loose">
               We are committed to processing the information in order to contact
               you and talk about your project. We are committed to processing
               the information.
