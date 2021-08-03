@@ -28,7 +28,11 @@
   }
 
   .base-description {
-    @apply text-indigo-400  text-xs sm:text-sm lg:text-base;
+    @apply text-indigo-400  text-sm sm:text-base lg:text-lg;
+  }
+
+  .base-card {
+    @apply text-green-200 text-sm md:text-base font-semibold;
   }
 
 }

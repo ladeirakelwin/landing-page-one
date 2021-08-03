@@ -186,15 +186,15 @@ export default function Home() {
         >
           <img
             src="images/flash-brand-right.webp"
-            alt=""
+            alt="flash image right"
             className="absolute z-0 right-0 bottom-40 hidden lg:block w-0 lg:w-auto"
           />
 
           <div className="flex flex-col text-center gap-4">
-            <h2 className="text-green-200 text-5xl font-semibold">
+            <h2 className="base-title">
               Your choice
             </h2>
-            <p className="text-indigo-400">
+            <p className="base-description">
               There are many reasons to get down and start to get depressed
               about your situation.
             </p>
