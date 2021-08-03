@@ -354,7 +354,7 @@ export default function Home() {
               <h2 className="base-title-form">
                 There are many reasons to get down
               </h2>
-              <p className="base-description w-1/2 mx-auto hidden sm:block">
+              <p className="base-description w-1/2 mx-auto ocult text-gray-300">
                 There are many reasons to get down and start to get depressed
                 about your situation.
               </p>
@@ -375,7 +375,7 @@ export default function Home() {
               </form>
             </div>
             <div className="flex">
-              <p className="mx-auto base-description">
+              <p className="mx-auto base-description text-gray-300">
                 No spam. Only releases, updates and discounts
               </p>
             </div>
