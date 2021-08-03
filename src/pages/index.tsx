@@ -349,12 +349,12 @@ export default function Home() {
           id="form-section"
           className="flex flex-col flex-1 items-center spacing-width spacing-height"
         >
-          <div className="rounded-md bg-indigo-700 text-center py-16 gap-8  items-center  px-0 sm:px-12  sm:w-full">
-            <div>
-              <h2 className="text-yellow-500 text-4xl font-bold mb-4">
+          <div className="rounded-md bg-indigo-700 text-center py-16 gap-8  items-center px-8  md:px-4 lg:px-0 sm:px-12  sm:w-full">
+            <div className="flex flex-col gap-4 mb-4">
+              <h2 className="base-title-form">
                 There are many reasons to get down
               </h2>
-              <p className="text-indigo-200 text-sm w-1/2 mx-auto mb-4 hidden sm:block">
+              <p className="base-description w-1/2 mx-auto hidden sm:block">
                 There are many reasons to get down and start to get depressed
                 about your situation.
               </p>
@@ -375,7 +375,7 @@ export default function Home() {
               </form>
             </div>
             <div className="flex">
-              <p className="mx-auto text-sm text-indigo-200">
+              <p className="mx-auto base-description">
                 No spam. Only releases, updates and discounts
               </p>
             </div>
