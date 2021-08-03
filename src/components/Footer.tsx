@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from 'react'
-import FooterMenu from "../components/FooterMenu";
+import FooterMenu from "./FooterMenu";
 import google from "@images/google.webp";
 import twitter from "@images/twitter.webp";
 import facebook from "@images/facebook.webp";
@@ -28,10 +28,10 @@ export default function Footer() {
             return <FooterMenu title={item} key={index}></FooterMenu>;
           })}
         </div>
-        <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start sm:justify-center text-gray-300">
-          <p>&copy; Copyrights 2021</p>
-          <p>Privacy policy</p>
-          <p>Terms of service</p>
+        <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start sm:justify-center text-gray-300 ">
+          <p className="text-xs md:text-base">&copy; Copyrights 2021</p>
+          <p className="text-xs md:text-base">Privacy policy</p>
+          <p className="text-xs md:text-base">Terms of service</p>
         </div>
       </footer>
   )

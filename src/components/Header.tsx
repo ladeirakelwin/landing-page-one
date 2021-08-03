@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import logo from "@images/logo.webp";
 import Image from "next/image";
-import Button from "../components/Button";
+import Button from "./Button";
 
 
 

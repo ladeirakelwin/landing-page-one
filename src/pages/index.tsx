@@ -316,8 +316,8 @@ export default function Home() {
               className="min-h-omah min-w-omah"
             ></Image>
           </div>
-          <div className="w-1/2 flex justify-center flex-col gap-8 text-left ">
-            <h2 className="base-title text-2xl  mx-auto text-center">
+          <div className="w-1/2 flex justify-center flex-col gap-8 text-left items-center ">
+            <h2 className="base-title text-2xl   text-center">
               Help Finding Information Online
             </h2>
             <p className="base-description text-xs w-4/5 mx-auto text-center md:text-left">
