@@ -23,6 +23,10 @@
     @apply mb-20 sm:mb-60 md:mb-80;
   }
 
+  .button {
+    @apply w-24 md:w-32 text-sm font-semibold;
+  }
+
   .base-title {
     @apply text-3xl md:text-4xl lg:text-5xl text-green-200 font-semibold;
   }

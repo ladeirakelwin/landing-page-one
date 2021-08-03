@@ -9,8 +9,10 @@ module.exports = {
     extend: {
       minHeight: {
         omah: "250px",
+        call: "180px"
       },
       minWidth: {
+        call: "196px",
         omah: "265px",
       },
       maxWidth: {

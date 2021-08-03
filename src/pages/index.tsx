@@ -4,7 +4,6 @@ import Button from "../components/Button";
 import ResultsCard from "../components/ResultsCard";
 import Card from "../components/Card";
 import YellowFont from "../components/YellowFont";
-import FooterMenu from "../components/FooterMenu";
 import runImage from "@images/run-image.webp";
 import profit from "@images/profitwell.webp";
 import appcues from "@images/appcues.webp";
@@ -118,10 +117,10 @@ export default function Home() {
               </p>
             </div>
             <div className="flex gap-6 mb-4 ">
-              <Button type="primary" className="text-sm w-32 h-10 font-semibold">
+              <Button type="primary" className="h-10 button">
                 Learn More
               </Button>
-              <Button type="secondary" className="text-sm w-32 h-10 font-semibold">
+              <Button type="secondary" className="h-10 button">
                 Demo
               </Button>
             </div>
@@ -216,20 +215,20 @@ export default function Home() {
           id="suggest"
           className="items-center justify-center flex flex-col md:flex-row z-10 spacing-width spacing-height"
         >
-          <div className="flex flex-col gap-8 w-1/2 mb-8 md:mb-0">
-            <h2 className="text-green-200 text-3xl md:text-5xl font-semibold">
+          <div className="flex flex-col gap-8 w-1/2 mb-8 md:mb-0 items-center md:items-left">
+            <h2 className="base-title text-center md:text-left">
               Increase your business <YellowFont>traffic</YellowFont>
             </h2>
-            <p className="text-sm text-indigo-400 w-5/6 leading-9">
+            <p className="base-description w-5/6 leading-6 md:leading-8 lg:leading-9 text-center md:text-left">
               We are committed to processing the information in order to contact
               you and talk about your project.
             </p>
-            <Button type="primary" className="text-sm w-32 h-10">
+            <Button type="primary" className="button h-10">
               Learn More
             </Button>
           </div>
-          <div className="w-1/2">
-            <Image src={callToAction} alt="call to action image"></Image>
+          <div className="w-1/2 flex justify-center">
+            <img src="images/call-to-action.webp" alt="call to action image" className="min-w-call min-h-call" />
           </div>
         </section>
         <section
