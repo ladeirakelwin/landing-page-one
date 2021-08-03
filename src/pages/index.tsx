@@ -105,14 +105,14 @@ export default function Home() {
       <main className="flex flex-col max-w-full">
         <section
           id="hero"
-          className="flex w-full  gap-10 relative z-10 mb-24 spacing-hero spacing-height"
+          className="flex w-full  gap-10 relative z-10 spacing-hero spacing-height"
         >
           <div className="w-full lg:w-1/2 relative z-10">
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-green-200 font-semibold">
+              <h1 className="base-title">
                 Many reasons to get up and start to get back in the business
               </h1>
-              <p className="text-indigo-400 py-4 text-xs sm:text-sm lg:text-base">
+              <p className="base-description py-4">
                 The harder you work for something, the greater you’ll feel when
                 you achieve it.
               </p>
@@ -131,12 +131,12 @@ export default function Home() {
                 alt="video player"
                 className="max-w-player "
               />
-              <div className="flex flex-col text-indigo-400 gap-3">
-                <p>
+              <div className="flex flex-col gap-3">
+                <p className="base-description">
                   The harder you work for something, the greater you’ll feel
                   when you achieve it.
                 </p>
-                <p>Watch preview</p>
+                <p className="base-description">Watch preview</p>
               </div>
             </div>
           </div>
