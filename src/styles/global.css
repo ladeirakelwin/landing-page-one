@@ -35,8 +35,11 @@
     @apply text-indigo-400  text-sm sm:text-base lg:text-lg;
   }
 
-  .base-card {
+  .base-card-title {
     @apply text-green-200 text-sm md:text-base font-semibold;
   }
 
+  .base-card-description {
+    @apply text-indigo-400 text-xs md:text-sm;
+  }
 }

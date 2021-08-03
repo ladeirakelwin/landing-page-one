@@ -16,8 +16,8 @@ export default function Card(props: CardProps) {
             <img className="w-6 h-6 font-semibold" src={props.src} alt={props.alt}/>
 
       <div className="flex flex-1 flex-col gap-4">
-        <h4 className="base-card">{props.title}</h4>
-        <p className="text-indigo-400 text-xs md:text-sm">{props.subtitle}</p>
+        <h4 className="base-card-title">{props.title}</h4>
+        <p className="base-card-description">{props.subtitle}</p>
       </div>
     </div>
   ) : (
@@ -25,7 +25,7 @@ export default function Card(props: CardProps) {
       <img className="w-6 h-6 font-semibold" src={props.src} alt={props.alt}/>
       <div className="flex flex-1 flex-col gap-2">
         <h4 className="base-card">{props.title}</h4>
-        <p className="text-indigo-400 text-xs md:text-sm">{props.subtitle}</p>
+        <p className="base-card-description">{props.subtitle}</p>
       </div>
     </div>
   );

@@ -235,12 +235,12 @@ export default function Home() {
           id="metrics"
           className="flex flex-col spacing-height spacing-width"
         >
-          <div className="text-center flex flex-col justify-center items-center pb-16">
-            <h2 className="w-2/3 text-4xl text-green-200 pb-8 font-bold">
+          <div className="text-center flex flex-col justify-center items-center pb-16 gap-8">
+            <h2 className="w-2/3 base-title ">
               3 Simple Ways To <YellowFont>Save</YellowFont> A Bunch Of{" "}
               <YellowFont>Money</YellowFont> When Buying A New Computer
             </h2>
-            <p className="w-1/2 text-indigo-400">
+            <p className="w-1/2 base-description">
               Fully customizable and neatly organized components will help you
               work faster without limiting creative freedom.
             </p>
