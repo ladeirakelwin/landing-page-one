@@ -139,7 +139,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative w-0 lg:w-1/2 hidden lg:block">
+          <div className="relative ocult lg:w-1/2">
             <Image
               src={runImage}
               placeholder="blur"
@@ -151,7 +151,7 @@ export default function Home() {
           <img
             src="images/flash-brand-left.webp"
             alt="flash left"
-            className="absolute z-0 left-0 top-72 hidden lg:block w-0 lg:w-auto"
+            className="absolute z-0 left-0 top-72  ocult"
           />
         </section>
         <section
@@ -186,7 +186,7 @@ export default function Home() {
           <img
             src="images/flash-brand-right.webp"
             alt="flash image right"
-            className="absolute z-0 right-0 bottom-40 hidden lg:block w-0 lg:w-auto"
+            className="absolute z-0 right-0 bottom-40 ocult"
           />
 
           <div className="flex flex-col text-center gap-4">
@@ -259,20 +259,20 @@ export default function Home() {
           id="call2action"
           className="flex flex-col gap-12 justify-center items-center   z-10 relative spacing-width spacing-c2a"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-green-200 text-center w-3/4 z-10 relative">
+          <h2 className="base-title text-center w-3/4 z-10 relative">
             Create your <YellowFont>next project</YellowFont> with startup
             framework
           </h2>
           <Button
             type="primary"
-            className="text-sm w-36 h-12 z-10 relative font-semibold"
+            className="button h-12 z-10 relative"
           >
             Get Started
           </Button>
           <img
             src="images/image-background-two.webp"
             alt="background icon two"
-            className="z-0  absolute hidden sm:block sm:top-60 md:top-52 lg:top-20 xl:top-16"
+            className="z-0 absolute ocult sm:top-60 md:top-52 lg:top-20 xl:top-16"
           />
         </section>
         <section

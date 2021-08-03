@@ -27,6 +27,9 @@
     @apply w-24 md:w-32 text-sm font-semibold;
   }
 
+  .ocult {
+    @apply hidden lg:block w-0 lg:w-auto;
+  }
   .base-title {
     @apply text-3xl md:text-4xl lg:text-5xl text-green-200 font-semibold;
   }
