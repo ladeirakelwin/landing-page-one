@@ -17,6 +17,7 @@ module.exports = {
       },
       maxWidth: {
         player: "200px",
+        omah: "400px"
       },
     },
   },

@@ -19,10 +19,6 @@
     @apply pb-12 sm:pb-20 lg:pb-36;
   }
 
-  .spacing-c2a {
-    @apply mb-20 sm:mb-60 md:mb-80;
-  }
-
   .button {
     @apply w-24 md:w-32 text-sm font-semibold;
   }

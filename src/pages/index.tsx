@@ -257,7 +257,7 @@ export default function Home() {
         </section>
         <section
           id="call2action"
-          className="flex flex-col gap-12 justify-center items-center   z-10 relative spacing-width spacing-c2a"
+          className="flex flex-col gap-12 justify-center items-center   z-10 relative spacing-width spacing-height lg:mb-52 xl:mb-72"
         >
           <h2 className="base-title text-center w-3/4 z-10 relative">
             Create your <YellowFont>next project</YellowFont> with startup
@@ -265,22 +265,22 @@ export default function Home() {
           </h2>
           <Button
             type="primary"
-            className="button h-12 z-10 relative"
+            className="button h-12 z-10 relative button"
           >
             Get Started
           </Button>
           <img
             src="images/image-background-two.webp"
             alt="background icon two"
-            className="z-0 absolute ocult sm:top-60 md:top-52 lg:top-20 xl:top-16"
+            className="z-0 absolute ocult lg:top-20 xl:top-16"
           />
         </section>
         <section
           id="omah-mukti"
-          className="flex flex-col lg:flex-row w-full mt-20 mb-28 items-center spacing-width spacing-height"
+          className="flex flex-col lg:flex-row w-full items-center spacing-width spacing-height"
         >
           <div className="flex flex-col justify-center text-center lg:text-left w-full gap-8 md:w-2/5 mb-16 lg:mb-0 items-center lg:items-start">
-            <h2 className="text-green-200 text-4xl font-bold leading-snug ">
+            <h2 className="base-title leading-snug ">
               Invest property for better <YellowFont>business</YellowFont>
             </h2>
             <p className="text-indigo-400 text-sm leading-loose">
@@ -288,7 +288,7 @@ export default function Home() {
               you and talk about your project. We are committed to processing
               the information.
             </p>
-            <Button type="primary" className="text-sm w-32 h-12 font-bold">
+            <Button type="primary" className="button h-12 ">
               Learn More
             </Button>
           </div>
@@ -296,12 +296,12 @@ export default function Home() {
             <img
               src="images/omah-mukti.webp"
               alt="example image"
-              className="relative z-10 h-5/6 w-full lg:w-auto min-h-omah min-w-omah"
+              className="relative z-10 h-5/6 w-full lg:w-auto min-h-omah min-w-omah max-w-omah"
             />
             <img
               src="images/world-map.webp"
               alt="world map image"
-              className="z-0 absolute bottom-9 right-0 left-36  hidden lg:block w-0  lg:w-auto h-0 lg:h-full "
+              className="z-0 absolute bottom-9 right-0 left-36 ocult  "
             />
           </div>
         </section>
