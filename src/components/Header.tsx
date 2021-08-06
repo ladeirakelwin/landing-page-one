@@ -15,6 +15,7 @@ export default function Header() {
         <button
           className="inline-block ml-auto lg:hidden w-8 h-8 rounded-lg bg-white text-yellow-500 p-1"
           onClick={() => setShow(!show)}
+          aria-label="burguer button"
         >
           <svg
             fill="currentColor"
@@ -49,12 +50,14 @@ export default function Header() {
           <Button
             type="secondary"
             className="text-yellow-500 text-sm w-24 h-9 font-medium"
+            ariaLabel="sign up button"
           >
             Sign In
           </Button>
           <Button
             type="primary"
             className="text-white text-sm w-24 h-9 font-medium"
+            ariaLabel="sign up button"
           >
             Sign Up
           </Button>
