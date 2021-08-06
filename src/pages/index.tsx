@@ -111,9 +111,9 @@ export default function Home() {
         >
           <div className="w-full lg:w-1/2 relative z-10">
             <div>
-              <h1 className="base-title">
+              <h2 className="base-title">
                 Many reasons to get up and start to get back in the business
-              </h1>
+              </h2>
               <p className="base-description py-4">
                 The harder you work for something, the greater you’ll feel when
                 you achieve it.
@@ -140,6 +140,8 @@ export default function Home() {
                 src="images/video.webp"
                 alt="video player"
                 className="max-w-player "
+                width="140"
+                height="80"
               />
               <div className="flex flex-col gap-3">
                 <p className="base-description">
@@ -277,6 +279,8 @@ export default function Home() {
               src="images/call-to-action.webp"
               alt="call to action image"
               className="min-w-call min-h-call"
+              width="196"
+              height="180"
             />
           </div>
         </section>
