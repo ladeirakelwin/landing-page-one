@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html className="bg-gradient-to-r from-indigo-900 to-indigo-800">
         <Head />
         <body>
           <Main />

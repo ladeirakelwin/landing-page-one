@@ -18,7 +18,6 @@ import Footer from "src/components/Footer";
 // estudar componentes do next
 
 export default function Home() {
-
   const yccInfos = [
     {
       src: "images/flip-horizontal.webp",
@@ -93,15 +92,15 @@ export default function Home() {
     },
   ];
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-14 bg-gradient-to-r from-indigo-900 to-indigo-800  font-normal ">
+    <div className="flex flex-col items-center justify-center min-h-screen py-14   font-normal max-w-screen-2xl 2xl:mx-auto">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header></Header>
-      
-      <main className="flex flex-col max-w-full">
+
+      <main className="flex flex-col max-w-screen-2xl 2xl:mx auto ">
         <section
           id="hero"
           className="flex w-full  gap-10 relative z-10 spacing-hero spacing-height"
@@ -152,6 +151,7 @@ export default function Home() {
             src="images/flash-brand-left.webp"
             alt="flash left"
             className="absolute z-0 left-0 top-72  ocult"
+            loading="lazy"
           />
         </section>
         <section
@@ -187,12 +187,11 @@ export default function Home() {
             src="images/flash-brand-right.webp"
             alt="flash image right"
             className="absolute z-0 right-0 bottom-40 ocult"
+            loading="lazy"
           />
 
           <div className="flex flex-col text-center gap-4">
-            <h2 className="base-title">
-              Your choice
-            </h2>
+            <h2 className="base-title">Your choice</h2>
             <p className="base-description">
               There are many reasons to get down and start to get depressed
               about your situation.
@@ -228,7 +227,11 @@ export default function Home() {
             </Button>
           </div>
           <div className="w-1/2 flex justify-center">
-            <img src="images/call-to-action.webp" alt="call to action image" className="min-w-call min-h-call" />
+            <img
+              src="images/call-to-action.webp"
+              alt="call to action image"
+              className="min-w-call min-h-call"
+            />
           </div>
         </section>
         <section
@@ -245,7 +248,7 @@ export default function Home() {
               work faster without limiting creative freedom.
             </p>
           </div>
-          <div className="grid grid-cols-1  sm:grid-cols-2 sm: md:grid-cols-3 justify-center">
+          <div className="grid grid-cols-1 sm: md:grid-cols-3 justify-center gap-4 md:gap-0">
             {resultsInfo.map(({ numbers, data }, index) => (
               <ResultsCard
                 numbers={numbers}
@@ -263,16 +266,14 @@ export default function Home() {
             Create your <YellowFont>next project</YellowFont> with startup
             framework
           </h2>
-          <Button
-            type="primary"
-            className="button h-12 z-10 relative button"
-          >
+          <Button type="primary" className="button h-12 z-10 relative button">
             Get Started
           </Button>
           <img
             src="images/image-background-two.webp"
             alt="background icon two"
             className="z-0 absolute ocult lg:top-20 xl:top-16"
+            loading="lazy"
           />
         </section>
         <section
@@ -297,11 +298,13 @@ export default function Home() {
               src="images/omah-mukti.webp"
               alt="example image"
               className="relative z-10 h-5/6 w-full lg:w-auto min-h-omah min-w-omah max-w-omah"
+              loading="lazy"
             />
             <img
               src="images/world-map.webp"
               alt="world map image"
               className="z-0 absolute bottom-9 right-0 left-36 ocult  "
+              loading="lazy"
             />
           </div>
         </section>
@@ -316,7 +319,7 @@ export default function Home() {
               className="min-h-omah min-w-omah"
             ></Image>
           </div>
-          <div className="w-1/2 flex justify-center flex-col gap-8 text-left items-center ">
+          <div className="md:w-1/2 flex justify-center flex-col gap-8 text-left items-center ">
             <h2 className="base-title lg:text-3xl xl:text-5xl   text-center">
               Help Finding Information Online
             </h2>
@@ -349,7 +352,7 @@ export default function Home() {
           id="form-section"
           className="flex flex-col flex-1 items-center spacing-width spacing-height"
         >
-          <div className="rounded-md bg-indigo-700 text-center py-16 gap-8  items-center px-8  md:px-4 lg:px-0 sm:px-12  sm:w-full">
+          <div className="rounded-md bg-indigo-700 text-center py-16 gap-8  items-center px-8  md:px-4 lg:px-0 sm:px-12  sm:w-full max-w-hundred">
             <div className="flex flex-col gap-4 mb-4">
               <h2 className="base-title-form">
                 There are many reasons to get down
@@ -359,16 +362,16 @@ export default function Home() {
                 about your situation.
               </p>
             </div>
-            <div>
-              <form className="flex justify-center pb-4">
+            <div className="max-w-hundred" >
+              <form className="flex justify-center pb-4 px-1">
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="flex w-32 sm:w-56 md:w-64 lg:w-1/3 p-4 rounded-l-sm border-0 bg-gray-600"
+                  className="flex w-full    sm:w-56 md:w-64 lg:w-1/3 p-4 rounded-l-sm border-0 bg-gray-600"
                 />
                 <Button
                   type="primary"
-                  className="flex text-sm  w-16 md:w-24 lg:w-32  border-0 items-center justify-center font-bold"
+                  className="flex text-sm  w-20 md:w-24 lg:w-32  border-0 items-center justify-center font-bold "
                 >
                   SEND
                 </Button>

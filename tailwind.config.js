@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       minHeight: {
         omah: "250px",
-        call: "180px"
+        call: "180px",
       },
       minWidth: {
         call: "196px",
@@ -17,7 +17,9 @@ module.exports = {
       },
       maxWidth: {
         player: "200px",
-        omah: "400px"
+        omah: "400px",
+        "3/4": "75%",
+        hundred: "100%",
       },
     },
   },

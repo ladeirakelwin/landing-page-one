@@ -9,14 +9,18 @@
 
 @layer components {
   .spacing-hero {
-    @apply px-12  sm:px-24 lg:pl-36 lg:pr-0;
+    @apply px-6 sm:px-16 md:px-24 lg:pl-36 lg:pr-0;
   }
   .spacing-width {
-    @apply px-12  sm:px-24 lg:px-36;
+    @apply px-6 sm:px-16 md:px-24 lg:px-36;
   }
 
   .spacing-height {
     @apply pb-12 sm:pb-20 lg:pb-36;
+  }
+
+  .text {
+    @apply text-center md:text-left;
   }
 
   .button {
