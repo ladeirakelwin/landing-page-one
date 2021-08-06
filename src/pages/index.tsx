@@ -96,6 +96,10 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Next.js knowledge improvement website"
+        ></meta>
       </Head>
 
       <Header></Header>
@@ -116,10 +120,18 @@ export default function Home() {
               </p>
             </div>
             <div className="flex gap-6 mb-4 ">
-              <Button type="primary" className="h-10 button">
+              <Button
+                type="primary"
+                className="h-10 button"
+                ariaLabel="learn more button"
+              >
                 Learn More
               </Button>
-              <Button type="secondary" className="h-10 button">
+              <Button
+                type="secondary"
+                className="h-10 button"
+                ariaLabel="demo button"
+              >
                 Demo
               </Button>
             </div>
@@ -144,7 +156,7 @@ export default function Home() {
               placeholder="blur"
               layout="responsive"
               alt="corredor"
-              className="run-image "
+              className="run-image"
             />
           </div>
           <img
@@ -160,22 +172,52 @@ export default function Home() {
         >
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 place-content-center	 flex-1 gap-8 justify-evenly items-center z-10 relative">
             <li className="flex justify-center">
-              <Image src={profit} alt="profitwell icon"></Image>
+              <Image
+                src={profit}
+                alt="profitwell icon"
+                width="118"
+                height="26"
+              ></Image>
             </li>
             <li className="flex justify-center">
-              <Image src={appcues} alt="appcues icon"></Image>
+              <Image
+                src={appcues}
+                alt="appcues icon"
+                width="118"
+                height="26"
+              ></Image>
             </li>
             <li className="flex justify-center">
-              <Image src={shipbob} alt="shipbob icon"></Image>
+              <Image
+                src={shipbob}
+                alt="shipbob icon"
+                width="93"
+                height="26"
+              ></Image>
             </li>
             <li className="flex justify-center">
-              <Image src={bench} alt="bench icon"></Image>
+              <Image
+                src={bench}
+                alt="bench icon"
+                width="118"
+                height="26"
+              ></Image>
             </li>
             <li className="flex justify-center">
-              <Image src={subbly} alt="subbly icon"></Image>
+              <Image
+                src={subbly}
+                alt="subbly icon"
+                width="56"
+                height="26"
+              ></Image>
             </li>
             <li className="flex justify-center">
-              <Image src={demio} alt="demio icon"></Image>
+              <Image
+                src={demio}
+                alt="demio icon"
+                width="118"
+                height="26"
+              ></Image>
             </li>
           </ul>
         </section>
@@ -222,7 +264,11 @@ export default function Home() {
               We are committed to processing the information in order to contact
               you and talk about your project.
             </p>
-            <Button type="primary" className="button h-10">
+            <Button
+              type="primary"
+              className="button h-10"
+              ariaLabel="learn more button"
+            >
               Learn More
             </Button>
           </div>
@@ -266,13 +312,21 @@ export default function Home() {
             Create your <YellowFont>next project</YellowFont> with startup
             framework
           </h2>
-          <Button type="primary" className="button h-12 z-10 relative button">
+          <Button
+            type="primary"
+            className="button h-12 z-10 relative"
+            ariaLabel="get started button"
+          >
             Get Started
           </Button>
           <img
             src="images/image-background-two.webp"
             alt="background icon two"
             className="z-0 absolute ocult lg:top-20 xl:top-16"
+            min-width="196"
+            min-height="204"
+            width="196"
+            height="204"
             loading="lazy"
           />
         </section>
@@ -289,7 +343,11 @@ export default function Home() {
               you and talk about your project. We are committed to processing
               the information.
             </p>
-            <Button type="primary" className="button h-12 ">
+            <Button
+              type="primary"
+              className="button h-12 "
+              ariaLabel="learn more button"
+            >
               Learn More
             </Button>
           </div>
@@ -298,6 +356,10 @@ export default function Home() {
               src="images/omah-mukti.webp"
               alt="example image"
               className="relative z-10 h-5/6 w-full lg:w-auto min-h-omah min-w-omah max-w-omah"
+              min-width="265"
+              min-height="250"
+              width="265"
+              height="250"
               loading="lazy"
             />
             <img
@@ -317,6 +379,8 @@ export default function Home() {
               src={example}
               alt="example image"
               className="min-h-omah min-w-omah"
+              min-width="265"
+              min-height="238"
             ></Image>
           </div>
           <div className="md:w-1/2 flex justify-center flex-col gap-8 text-left items-center ">
@@ -362,7 +426,7 @@ export default function Home() {
                 about your situation.
               </p>
             </div>
-            <div className="max-w-hundred" >
+            <div className="max-w-hundred">
               <form className="flex justify-center pb-4 px-1">
                 <input
                   type="email"
@@ -371,7 +435,8 @@ export default function Home() {
                 />
                 <Button
                   type="primary"
-                  className="flex text-sm  w-20 md:w-24 lg:w-32  border-0 items-center justify-center font-bold "
+                  className="flex text-sm  w-20 md:w-24 lg:w-32  border-0 items-center justify-center font-bold"
+                  ariaLabel="Next.js knowledge improvement website"
                 >
                   SEND
                 </Button>

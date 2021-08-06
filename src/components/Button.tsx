@@ -4,6 +4,7 @@ type ButtonProps = {
   type: string;
   className?: string | null;
   children?: string | null;
+  ariaLabel:string;
 };
 
 function Button(props: ButtonProps) {
@@ -13,7 +14,7 @@ function Button(props: ButtonProps) {
       : "bg-transparent border-yellow-500 border-2  rounded-sm text-sm text-yellow-500"
   }`
   
-  return <button className={classe}>{props.children}</button>;
+  return <button className={classe} aria-label={props.ariaLabel}>{props.children}</button>;
 }
 
 export default Button;
